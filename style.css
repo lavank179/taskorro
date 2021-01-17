@@ -1,0 +1,16 @@
+html{
+    background: url('./images/main-back.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.title1{
+    background: none;
+}
+
+.title1 h1{
+    font-family: Georgia;
+    color: #d500f9;
+}

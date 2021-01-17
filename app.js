@@ -5,6 +5,10 @@ const cleasBtn = document.querySelector(".clear-tasks");
 const filter = document.querySelector("#filter");
 const taskInput = document.querySelector("#task");
 
+// style vars
+const title1 = document.querySelector('.card');
+const mainc = document.querySelector('#main');
+
 // Load all event listeners
 loadEventListeners();
 
@@ -20,6 +24,13 @@ function loadEventListeners() {
   cleasBtn.addEventListener("click", clearTasks);
   //Filter tasks event
   filter.addEventListener("keyup", filterTasks);
+
+
+  // Others styles
+  title1.addEventListener('mouseenter', addShadow);
+  title1.addEventListener('mouseleave', removeShadow);
+  mainc.addEventListener('mouseenter', addShadow);
+  mainc.addEventListener('mouseleave', removeShadow);
 }
 
 // Get Tasks from LS
@@ -164,4 +175,16 @@ function filterTasks(e) {
       task.style.display = "none";
     }
   });
+}
+
+
+
+// Add Shadow
+function addShadow(e){
+    e.target.classList.add('z-depth-5');
+}
+
+// Remove Shadow
+function removeShadow(e){
+    e.target.classList.remove('z-depth-5');
 }
